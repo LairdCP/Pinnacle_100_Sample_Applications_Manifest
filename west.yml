@@ -1,0 +1,42 @@
+manifest:
+  remotes:
+    - name: LairdCP
+      url-base: https://github.com/LairdCP
+    - name: ncs
+      url-base: https://github.com/nrfconnect
+
+  # Please add items below based on alphabetical order.
+  # These dependencies may need updating if new features are added to the firmware.
+  projects:
+    - name: Pinnacle_100_Sample_Applications
+      path: pinnacle_100_sample_applications
+      remote: LairdCP
+    - name: sdk-nrf
+      path: nrf
+      revision: 843fb6fd97b3672daae67cbe1ede8f310837a3d5
+      remote: ncs
+      import: true
+    - name: zephyr
+      west-commands: scripts/west-commands.yml
+      revision: hl7800-v2.0.0
+      remote: LairdCP
+      import: true
+    - name: zephyr_framework
+      path: modules/framework
+      revision: fd546c5341075a172f243aaefad23c465fdf2c79
+      remote: LairdCP
+    - name: zephyr-hal-lairdconnectivity
+      path: zephyr/ext/hal/lairdconnectivity
+      revision: f2e46c9ad8da72868d48b1eb2daf623c97817b42
+      remote: LairdCP
+    - name: zephyr_boards
+      path: zephyr/boards/arm
+      revision: 958483b12e5868b04409d765af582613a499f20d
+      remote: LairdCP
+    - name: zephyr_lib
+      path: modules/zephyr_lib
+      revision: a70f04f602b5a245e14eb9c83d73739036b2ddd3
+      remote: LairdCP
+
+  self:
+    path: manifest_repo
