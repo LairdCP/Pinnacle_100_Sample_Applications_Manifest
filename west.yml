@@ -2,36 +2,54 @@ manifest:
   remotes:
     - name: LairdCP
       url-base: https://github.com/LairdCP
-    - name: ncs
-      url-base: https://github.com/nrfconnect
 
+  # Please add items below based on alphabetical order.
+  # These dependencies may need updating if new features are added to the firmware.
   # Please add items below based on alphabetical order.
   # These dependencies may need updating if new features are added to the firmware.
   projects:
     - name: Pinnacle_100_Sample_Applications
-      path: pinnacle_100_sample_applications
+      revision: f483a671992d743118db674d6bab58fb9e98ac35
       remote: LairdCP
     - name: sdk-nrf
       path: nrf
-      revision: 843fb6fd97b3672daae67cbe1ede8f310837a3d5
-      remote: ncs
+      revision: 687493d3365292c47487cf91c89b921a7950589f
+      remote: LairdCP
       import: true
     - name: zephyr
-      west-commands: scripts/west-commands.yml
-      revision: 40017182614910d5c8f42504f6bf3025c72626f3
+      revision: 52c22eaf9d6fc6aa728c8fc71bddde07bfc2768e
       remote: LairdCP
-      import: true
-    - name: zephyr-hal-lairdconnectivity
-      path: zephyr/ext/hal/lairdconnectivity
-      revision: f2e46c9ad8da72868d48b1eb2daf623c97817b42
-      remote: LairdCP
+      import:
+        # In addition to the zephyr repository itself, NCS also
+        # imports the contents of zephyr/west.yml.
+        # Only the projects explicitly named in the
+        # following whitelist are imported.
+        #
+        # Note that the zephyr west extensions (like 'build', 'flash',
+        # 'debug', etc.) are automatically provided by this import, so
+        # there's no need to add a redundant west-commands: key for
+        # the zephyr project.
+        #
+        # Please keep this list sorted alphabetically.
+        name-whitelist:
+          - cmsis
+          - fatfs
+          - libmetal
+          - littlefs
+          - mbedtls
+          - mcumgr
+          - mipi-sys-t
+          - net-tools
+          - nrf_hw_models
+          - open-amp
+          - openthread
+          - segger
+          - tinycbor
+          - tinycrypt
     - name: zephyr_boards
-      path: zephyr/boards/arm
-      revision: 5c54980b63737e8286ae097d103c7c57c53905e8
+      path: Pinnacle_100_Sample_Applications/boards/arm
+      revision: 725ba1646c6a7b358d072a334fe14ccd87a43afa
       remote: LairdCP
-    #- name: zephyr_lib
-    #  path: modules/zephyr_lib
-    #  remote: LairdCP
 
   self:
-    path: pinnacle_100_sample_applications_manifest
+    path: pinnacle_100_sample_applications_public_manifest
