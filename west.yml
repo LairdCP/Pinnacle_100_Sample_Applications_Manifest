@@ -9,15 +9,15 @@ manifest:
   # These dependencies may need updating if new features are added to the firmware.
   projects:
     - name: Pinnacle_100_Sample_Applications
-      revision: f483a671992d743118db674d6bab58fb9e98ac35
+      revision: 3eecc07b9b977fe8de88a6d48bcac2fd546059c3
       remote: LairdCP
     - name: sdk-nrf
       path: nrf
-      revision: 687493d3365292c47487cf91c89b921a7950589f
+      revision: v1.6.9
       remote: LairdCP
       import: true
     - name: zephyr
-      revision: 52c22eaf9d6fc6aa728c8fc71bddde07bfc2768e
+      revision: 48ec18e87c38b82f9d36d7daf1616b295a581ae7
       remote: LairdCP
       import:
         # In addition to the zephyr repository itself, NCS also
@@ -34,6 +34,7 @@ manifest:
         name-whitelist:
           - cmsis
           - fatfs
+          - hal_nordic
           - libmetal
           - littlefs
           - mbedtls
