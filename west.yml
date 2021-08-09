@@ -13,7 +13,7 @@ manifest:
       remote: LairdCP
     - name: sdk-nrf
       path: nrf
-      revision: v1.6.9
+      revision: v1.6.0
       remote: LairdCP
       import: true
     - name: zephyr
