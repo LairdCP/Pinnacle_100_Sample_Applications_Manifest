@@ -9,7 +9,7 @@ manifest:
   # These dependencies may need updating if new features are added to the firmware.
   projects:
     - name: Pinnacle_100_Sample_Applications
-      revision: 3eecc07b9b977fe8de88a6d48bcac2fd546059c3
+      revision: 9e4a034af9e42b5d9ba52759f64ca9f2865293f2
       remote: LairdCP
     - name: sdk-nrf
       path: nrf
@@ -17,7 +17,7 @@ manifest:
       remote: LairdCP
       import: true
     - name: zephyr
-      revision: 48ec18e87c38b82f9d36d7daf1616b295a581ae7
+      revision: 1cef0e55aa6980ceea0fa5b0c52a02ae591e89bc
       remote: LairdCP
       import:
         # In addition to the zephyr repository itself, NCS also
