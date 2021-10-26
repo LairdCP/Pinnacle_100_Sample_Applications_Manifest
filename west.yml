@@ -9,15 +9,15 @@ manifest:
   # These dependencies may need updating if new features are added to the firmware.
   projects:
     - name: Pinnacle_100_Sample_Applications
-      revision: 9e4a034af9e42b5d9ba52759f64ca9f2865293f2
+      revision: 5bc061522844dccb043df64d4894c690df558d06
       remote: LairdCP
     - name: sdk-nrf
       path: nrf
-      revision: v1.6.0
+      revision: v1.7.0
       remote: LairdCP
       import: true
     - name: zephyr
-      revision: 1cef0e55aa6980ceea0fa5b0c52a02ae591e89bc
+      revision: d1701b894d795178cd66eb1c92ed66c014a47fec
       remote: LairdCP
       import:
         # In addition to the zephyr repository itself, NCS also
@@ -49,8 +49,12 @@ manifest:
           - tinycrypt
     - name: zephyr_boards
       path: Pinnacle_100_Sample_Applications/boards/arm
-      revision: 725ba1646c6a7b358d072a334fe14ccd87a43afa
+      revision: 93130b2ade0fed56423fe22921ec482e30eeedcf
       remote: LairdCP
+    - name: zephyr_lib
+      path: modules/zephyr_lib
+      revision: fba7a28b70316f1128522b9a678e81928d81f6db
+      remote: LairdCP      
 
   self:
-    path: pinnacle_100_sample_applications_public_manifest
+    path: Pinnacle_100_Sample_Applications_public_manifest
