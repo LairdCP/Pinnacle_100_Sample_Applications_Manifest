@@ -40,5 +40,5 @@ See here to [setup the GNU ARM Embedded tools](https://docs.zephyrproject.org/2.
 From the directory where you issued the `west init` and `west update` commands you can use the following command to build the firmware:
 
 ```
-west build -b pinnacle_100_dvk -d Pinnacle_100_Sample_Applications/build[app_name] Pinnacle_100_Sample_Applications/apps[app_name]
+west build -b pinnacle_100_dvk -d Pinnacle_100_Sample_Applications/build/[app_name] Pinnacle_100_Sample_Applications/apps/[app_name]
 ```
