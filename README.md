@@ -30,7 +30,7 @@ west update
 
 If this is your first time working with a Zephyr project on your computer you should follow the [Zephyr getting started guide](https://docs.zephyrproject.org/latest/getting_started/index.html#) to install all the tools.
 
-The OOB demo uses zephyr 2.6.99 (2.7.0 dev branch), so GCC 10 is recommended.
+The OOB demo uses zephyr 2.7.99 (2.7.0 dev branch), so GCC 10 is recommended.
 [GNU Arm Embedded Toolchain: 10.3-2021.07](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) is recommended.
 
 See here to [setup the GNU ARM Embedded tools](https://docs.zephyrproject.org/2.7.0/getting_started/toolchain_3rd_party_x_compilers.html)
