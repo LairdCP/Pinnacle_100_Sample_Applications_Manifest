@@ -1,5 +1,7 @@
 manifest:
   remotes:
+    - name: CanvasDM
+      url-base: https://github.com/CanvasDM
     - name: LairdCP
       url-base: https://github.com/LairdCP
 
@@ -9,15 +11,32 @@ manifest:
   # These dependencies may need updating if new features are added to the firmware.
   projects:
     - name: Pinnacle_100_Sample_Applications
-      revision: d8faf822cdbdbc2a0d6f87a18cbd6a9bd2e17fac
+      revision: 13d5c7190ca1c1624706153a1124c8c2bb224c0b
       remote: LairdCP
     - name: sdk-nrf
       path: nrf
-      revision: v1.9.0
+      revision: 9a9d1a5c4f5483a7c55b259df69346b702987238
       remote: LairdCP
-      import: true
+      import:
+        # Please keep this list sorted alphabetically.
+        name-blocklist:
+          - Alexa-Gadgets-Embedded-Sample-Code
+          - canopennode
+          - cirrus
+          - civetweb
+          - connectedhomeip
+          - find-my
+          - hal_st
+          - homekit
+          - loramac-node
+          - lvgl
+          - matter
+          - mbed-cloud-client
+          - nrf-802154
+          - openthread
+          - sdk-lc3
     - name: zephyr
-      revision: 9f4d0a24870169fdcd4721a5a4c4fc60e50c7e9c
+      revision: 450dfa9a36f272d56c9bbe3642de3f97ebafc62a
       remote: LairdCP
       import:
         # In addition to the zephyr repository itself, NCS also
@@ -45,16 +64,16 @@ manifest:
           - open-amp
           - openthread
           - segger
-          - tinycbor
           - tinycrypt
-    - name: zephyr_boards
-      path: boards/arm
-      revision: 6429ac0029c476eb621ad5e022d3b5eb0131f219
-      remote: LairdCP
+          - zcbor
     - name: zephyr_lib
       path: modules/lib/laird_connect/zephyr_lib
-      revision: 28df46426a0589d5a2b5ba1def90e5896f92db8d
+      revision: c5db60e1a3fd580671f793144d86089b56dfc600
       remote: LairdCP
+    - name: network_monitor_module
+      path: modules/lib/laird_connect/network_monitor
+      revision: bb7908926648ab07ee69c4308dfd3cf334cc5efe
+      remote: CanvasDM
 
   self:
     path: Pinnacle_100_Sample_Applications_public_manifest
