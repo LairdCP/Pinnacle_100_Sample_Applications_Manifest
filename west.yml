@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/CanvasDM
     - name: LairdCP
       url-base: https://github.com/LairdCP
+    - name: Nordic
+      url-base: https://github.com/nrfconnect
 
   # Please add items below based on alphabetical order.
   # These dependencies may need updating if new features are added to the firmware.
@@ -11,12 +13,12 @@ manifest:
   # These dependencies may need updating if new features are added to the firmware.
   projects:
     - name: Pinnacle_100_Sample_Applications
-      revision: 13d5c7190ca1c1624706153a1124c8c2bb224c0b
+      revision: 0d02e2be3673d7b22cbe358cf9958b54451f9b2a
       remote: LairdCP
     - name: sdk-nrf
       path: nrf
-      revision: 9a9d1a5c4f5483a7c55b259df69346b702987238
-      remote: LairdCP
+      revision: v2.4.1
+      remote: Nordic
       import:
         # Please keep this list sorted alphabetically.
         name-blocklist:
@@ -35,20 +37,11 @@ manifest:
           - nrf-802154
           - openthread
           - sdk-lc3
+          - zephyr
     - name: zephyr
-      revision: 450dfa9a36f272d56c9bbe3642de3f97ebafc62a
+      revision: ef63a2df1b3683e13d5b08a0fa68162825abcc34
       remote: LairdCP
       import:
-        # In addition to the zephyr repository itself, NCS also
-        # imports the contents of zephyr/west.yml.
-        # Only the projects explicitly named in the
-        # following whitelist are imported.
-        #
-        # Note that the zephyr west extensions (like 'build', 'flash',
-        # 'debug', etc.) are automatically provided by this import, so
-        # there's no need to add a redundant west-commands: key for
-        # the zephyr project.
-        #
         # Please keep this list sorted alphabetically.
         name-allowlist:
           - cmsis
@@ -68,11 +61,11 @@ manifest:
           - zcbor
     - name: zephyr_lib
       path: modules/lib/laird_connect/zephyr_lib
-      revision: c5db60e1a3fd580671f793144d86089b56dfc600
+      revision: db55ee78bb9ef9b7bc085c1ebad01046935ca92e
       remote: LairdCP
     - name: network_monitor_module
       path: modules/lib/laird_connect/network_monitor
-      revision: bb7908926648ab07ee69c4308dfd3cf334cc5efe
+      revision: a4ad284f9aed3c7266832c9455d010e1f952c33c
       remote: CanvasDM
 
   self:
